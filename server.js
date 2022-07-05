@@ -15,6 +15,10 @@ app.use(express.json())
 
 app.use(express.urlencoded({ extended: true }))
 
+// routes
+const router = require("./Routes/productRouter.js");
+app.use("/api/products", router);
+
 // testing api
 
 app.get('/', (req, res) => {
